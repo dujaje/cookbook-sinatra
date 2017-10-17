@@ -1,0 +1,9 @@
+<h1>Welcome to your saved recipes</h1>
+
+<% @recipes.each do |recipe| %>
+  <div class="recipe_div">
+    <a href="/recipes/<%= recipe.name.downcase.tr(' ', '_') %>"><h2><%= recipe.name.split.map(&:capitalize).join(' ') %></h2></a>
+    <h6><%= recipe.cooking_time + " -- " + recipe.difficulty %></h6>
+    <p><%= recipe.description.split('').first(100).join + "..." %></p>
+  </div>
+<% end %>

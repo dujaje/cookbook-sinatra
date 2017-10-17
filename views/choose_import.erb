@@ -1,0 +1,15 @@
+<h1> Which of these recipes would you like to import? </h1>
+<br\>
+<br\>
+
+<form method="post" action="/recipes">
+<% i = 0 %>
+  <label for="list_id">Select a Dish</label>
+  <select id='list_id' name='list_id' type='text'>
+    <% @recipe_names_array.each() do |recipe| %>
+      <option name="recipe_array_index" value="<%= @recipe_names_array.index(recipe) %>"> <%= recipe %> </option>
+      <% i += 1 %>
+    <% end %>
+  </select>
+  <input type="submit">
+</form>

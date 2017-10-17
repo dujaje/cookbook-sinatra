@@ -1,0 +1,14 @@
+<h1><%= @recipe.name.split.map(&:capitalize).join(' ') %></h1>
+<h4><%= @recipe.cooking_time + " -- " + @recipe.difficulty %></h4>
+<h3>Ingredients</h3>
+<% ingredients_array = @recipe.ingredients.split("-")
+  ingredients_array.each_with_index do |line, index| %>
+    <p> <%= "- #{line}" %></p>
+    <p> </p>
+  <% end %>
+<h3>Method</h3>
+<% description_array = @recipe.description.split(".")
+  description_array.each_with_index do |line, index| %>
+    <p> <%= "#{index + 1}. #{line}" %></p>
+    <p> </p>
+  <% end %>

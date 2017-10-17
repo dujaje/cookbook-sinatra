@@ -1,0 +1,8 @@
+<!-- ######################## NAVBAR ############################## -->
+<!-- in layout -->
+<!-- ########################### BODY ########################### -->
+<h1> Welcome to your Digital Cookbook! </h1>
+
+<div>
+  <h2>Recipe of the Day: <%= @recipes.sample.name.split.map(&:capitalize).join(' ') %></h2>
+</div>
